@@ -5,12 +5,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "pnpm -C play dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sun-sun/components": "workspace:^",
+    "@sun-sun/theme-chalk": "workspace:^",
+    "@sun-sun/utils": "workspace:^",
     "typescript": "^5.7.2",
     "vue": "^3.5.13"
   }
