@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-function _bem(prefixName: string, blockSuffix: string, element: string, modifier: string) {
+function _bem(prefixName?: string, blockSuffix?: string, element?: string, modifier?: string) {
   if(blockSuffix){
     prefixName += `-${blockSuffix}`
   }
@@ -18,8 +11,8 @@ function _bem(prefixName: string, blockSuffix: string, element: string, modifier
   return prefixName
 }
 
-function createBEM(prefixName: string) {
-  const b = (blockSuffix: string) => blockSuffix ?_bem(prefixName, blockSuffix, '', '') : '';
+function createBEM(prefixName?: string) {
+  const b = (blockSuffix?: string) => blockSuffix ? _bem(prefixName, blockSuffix, '', '') : '';
   const e = (element: string) => element ? _bem(prefixName, '', element, '') : '';  
   const m = (modifier: string) => modifier ? _bem(prefixName, '', '', modifier) : '';
   const be = (blockSuffix: string, element: string) => blockSuffix && element ? _bem(prefixName, blockSuffix, element, '') : '';
@@ -52,5 +45,5 @@ console.log(bem.bm('box', 'modifier'))
 console.log(bem.em('element', 'modifier'))
 console.log(bem.bem('box', 'element', 'modifier'))
 console.log(bem.is('active', true))
-
+export { createNamespace }
 

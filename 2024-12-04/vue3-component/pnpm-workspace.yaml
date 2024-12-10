@@ -1,4 +1,4 @@
 package:
     - play # 存放我们的组件测试的时候的代码
     - docs # 存放我们组件文档
-    - "packages/**"
+    - packages/**
