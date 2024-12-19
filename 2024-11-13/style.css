@@ -1,0 +1,22 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+.box {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 16px;
+}
+#text {
+  height: calc(100% - 30px);
+  columns: calc(100vw - 32px) 1;
+  column-gap: 16px;
+  transition: .4s;
+}
+.btn {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
