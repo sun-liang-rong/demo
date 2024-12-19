@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手写一个响应式</title>
+</head>
+<body>
+  <button id="btn">点击</button>
+  <div id="app"></div>
+  <script type="module">
+    import { effect, reactive } from './index.js'
+    const btn = document.getElementById('btn')
+    const app = document.getElementById('app')
+    const state = reactive({
+      count: 0
+    })
+    effect(() => {
+      app.textContent = state.count
+    })
+    btn.addEventListener('click', () => {
+      console.log('点击')
+      state.count++
+    })
+  </script>
+</body>
+</html>
